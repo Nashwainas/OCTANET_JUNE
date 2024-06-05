@@ -1,0 +1,171 @@
+.outer {
+    position: absolute;
+    height: 97%;
+    width: 99%;
+    background-color: #fe724c;
+    background-image: url('foo1.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+body {
+    background-color: black;
+    border: 5px solid darkblue;
+}
+
+.in1 {
+    position: fixed;
+    height: 30px;
+    top: 40px;
+    width: 120px;
+    left: 30px;
+    background-color: none;
+    text-align: center;
+    color: rgb(195, 36, 36);
+    font-weight: bold;
+}
+
+.in1:hover {
+    color: yellow;
+}
+
+.in2 {
+    position: fixed;
+    height: 30px;
+    top: 40px;
+    width: 120px;
+    left: 140px;
+    background-color: none;
+    text-align: center;
+    color: rgb(195, 36, 36);
+    font-weight: bold;
+
+}
+
+.in2:hover {
+    color: yellow;
+}
+
+.in3 {
+    position: fixed;
+    height: 30px;
+    top: 40px;
+    width: 120px;
+    left: 240px;
+    background-color: none;
+    text-align: center;
+    color: rgb(195, 36, 36);
+    font-weight: bold;
+
+}
+
+.in3:hover {
+    color: yellow;
+}
+
+.in4 {
+    position: fixed;
+    height: 30px;
+    top: 40px;
+    width: 120px;
+    left: 350px;
+    background-color: none;
+    text-align: center;
+    color: rgb(195, 36, 36);
+    font-weight: bold;
+
+}
+
+.in4:hover {
+    color: yellow;
+}
+
+
+.side1 {
+    position: fixed;
+    top: 100px;
+    left: 500px;
+    width: 30%;
+    height: 50%;
+    background-color: transparent;
+
+}
+
+input[type="email"] {
+    width: 200px;
+    height: 25px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 20px; 
+    outline: none;
+    margin-bottom: 20px;
+    
+}
+input[type="password"] {
+    width: 200px;
+    height: 25px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 20px; 
+    outline: none;
+    margin-bottom: 20px;
+    
+}
+input[type="submit"]{
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color:#fe724c;
+    border: none;
+    border-radius: 20px; /* Makes the corners rounded */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="button"]{
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color:#fe724c;
+    border: none;
+    border-radius: 20px; /* Makes the corners rounded */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.formin {
+    text-align: center;
+    color: maroon;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+.formin p{
+    color: black;
+    font-size: 20px;
+}
+.formin .inp{
+    color: black;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 15px;
+}
+.com{
+    position: fixed;
+    top:550px;
+    font-weight: bold;
+}
+input[type="text"] {
+    width: 400px;
+    height: 10px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 20px; 
+    outline: none;
+    margin-bottom: 20px;
+    
+}
