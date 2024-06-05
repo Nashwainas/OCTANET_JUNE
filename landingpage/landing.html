@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="landing.css">
+</head>
+<body>
+    <div class="outer">
+        <div class="in1"><span>Home</span></div>
+        <div class="in2"><span>Login</span></div>
+        <div class="in3"><span>Order</span></div>
+        <div class="in4"><span>Comment</span></div>
+
+        <div class="side1">
+            <form method="get">
+                <div class="formin">
+                    <p>Find your favorite Japanese cuisine!</p>
+                    <p class="inp">Exclusive for Manga Readers and Anime lovers</p>
+                    <input type="email" id="i1" placeholder="Email Address"><br>
+                    <input type="password" id="i2" placeholder="Password"><br>
+                    <input type="submit" value="Sign Up">
+                </div>
+            </form>
+        </div>
+        <div class="com">
+            <p class="get">We root for you:</p>
+            <input type="text" id="okk" placeholder="Leave your Comment">
+            <input type="button" id="commentButton" value="Ok">
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for the Landing Page
+
+        // Event listener for form submission
+        document.getElementsByTagName('form')[0].addEventListener('submit', function(event) {
+            event.preventDefault();
+            let email = document.getElementById('i1').value;
+            let password = document.getElementById('i2').value;
+
+            // Simple validation
+            if (email && password) {
+                alert('Sign Up successful! Welcome to our community.');
+            } else {
+                alert('Please fill in all fields.');
+            }
+        });
+
+        // Event listener for comment button
+        document.getElementById('commentButton').addEventListener('click', function() {
+            let comment = document.getElementById('okk').value;
+            if (comment) {
+                alert('Thank you! We always aim to improve!!');
+            } else {
+                alert('Please put in something!!');
+            }
+        });
+
+        document.querySelector('.in1 span').onclick = function() {
+            navigate('Home');
+        };
+
+        document.querySelector('.in2 span').onclick = function() {
+            navigate('Login');
+        };
+
+        document.querySelector('.in3 span').onclick = function() {
+            navigate('Order');
+        };
+
+        document.querySelector('.in4 span').onclick = function() {
+            navigate('Comment');
+        };
+        function navigate(page) {
+            alert(`Navigating to ${page}`);
+            window.location.href = page.toLowerCase() + '.html';
+        }
+        // Event listener for comment input
+        document.getElementsByClassName('com')[0].getElementsByTagName('input')[0].addEventListener('input', function(event) {
+            let comment = event.target.value;
+            document.getElementsByClassName('get')[0].textContent = comment ? `We root for you: ${comment}` : 'We root for you:';
+        });
+
+        // Function to add hover effect on navigation items
+        function addHoverEffect(element, color) {
+            element.addEventListener('mouseover', function() {
+                element.style.backgroundColor = color;
+            });
+            element.addEventListener('mouseout', function() {
+                element.style.backgroundColor = '';
+            });
+        }
+
+        // Adding hover effects and click events to navigation items
+        let navItems = document.getElementsByClassName('outer')[0].children;
+
+
+        for (let i = 0; i < 4; i++) {
+
+            navItems[i].addEventListener('click', function() {
+                alert(`Navigating to ${navItems[i].innerText}`);
+            });
+        }
+    </script>
+</body>
+</html>
